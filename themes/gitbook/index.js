@@ -160,8 +160,8 @@ const LayoutBase = props => {
                   <NavPostList filteredNavPages={filteredNavPages} {...props} />
                 </div>
                 {/* 页脚 */}
-                <Footer {...props} />
-              </div>
+                <AdSlot type='in-article' />
+                <Live2D />
             </div>
           )}
 
@@ -215,9 +215,9 @@ const LayoutBase = props => {
                   {/* gitbook主题首页只显示公告 */}
                   <Announcement {...props} />
                 </div>
-
-                <AdSlot type='in-article' />
-                <Live2D />
+                    
+                <Footer {...props} />
+              </div>
               </div>
             </div>
           )}
