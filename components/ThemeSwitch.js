@@ -29,7 +29,7 @@ const ThemeSwitch = () => {
       <Draggable stick={true}>
         <div
           id='draggableBox'
-          style={{ left: '0px', top: '80vh' }}
+          style={{ left: '0px', top: '120vh' }}
           className='border dark:border-gray-600 fixed group flex flex-col items-start space-y-2 overflow-hidden z-20 p-3
                     dark:text-white bg-white dark:bg-black 
                       rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl   '>
