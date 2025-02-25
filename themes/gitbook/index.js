@@ -160,8 +160,9 @@ const LayoutBase = props => {
                   <NavPostList filteredNavPages={filteredNavPages} {...props} />
                 </div>
                 {/* 页脚 */}
-                <AdSlot type='in-article' />
                 <Live2D />
+
+              </div>
             </div>
           )}
 
@@ -216,8 +217,9 @@ const LayoutBase = props => {
                   <Announcement {...props} />
                 </div>
                     
+                <AdSlot type='in-article' />
                 <Footer {...props} />
-              </div>
+                    
               </div>
             </div>
           )}
