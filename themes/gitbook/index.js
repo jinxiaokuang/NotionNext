@@ -185,7 +185,7 @@ const LayoutBase = props => {
 
             {/* 底部 */}
             <div className='md:hidden'>
-              <Footer {...props} />
+   
             </div>
           </div>
 
@@ -218,7 +218,7 @@ const LayoutBase = props => {
                 </div>
                     
                 <AdSlot type='in-article' />
-                <Footer {...props} />
+  
                     
               </div>
             </div>
