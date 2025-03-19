@@ -175,7 +175,7 @@ const NavBar = props => {
         <RandomPostButton {...props} />
       )}
       { 
-        <SearchButton {...props} />
+        <SocialButton />
       }
       {siteConfig('NOBELIUM_MENU_SEARCH_BUTTON') && <SearchButton {...props} />}
       <i
