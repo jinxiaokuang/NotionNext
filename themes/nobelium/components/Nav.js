@@ -10,6 +10,7 @@ import { MenuItemCollapse } from './MenuItemCollapse'
 import { MenuItemDrop } from './MenuItemDrop'
 import RandomPostButton from './RandomPostButton'
 import SearchButton from './SearchButton'
+import SocialButton from './SocialButton'
 import { SvgIcon } from './SvgIcon'
 /**
  * 顶部导航
@@ -173,6 +174,9 @@ const NavBar = props => {
       {siteConfig('NOBELIUM_MENU_RANDOM_POST') && (
         <RandomPostButton {...props} />
       )}
+      { 
+        <SearchButton {...props} />
+      }
       {siteConfig('NOBELIUM_MENU_SEARCH_BUTTON') && <SearchButton {...props} />}
       <i
         onClick={toggleOpen}
