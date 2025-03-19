@@ -174,9 +174,6 @@ const NavBar = props => {
       {siteConfig('NOBELIUM_MENU_RANDOM_POST') && (
         <RandomPostButton {...props} />
       )}
-      { 
-        <SocialButton />
-      }
       {siteConfig('NOBELIUM_MENU_SEARCH_BUTTON') && <SearchButton {...props} />}
       <i
         onClick={toggleOpen}
