@@ -55,6 +55,21 @@ const LayoutBase = props => {
   const router = useRouter()
   const showRandomButton = siteConfig('HEXO_MENU_RANDOM', false, CONFIG)
 
+  // 状态变量，用于标记是否已经执行过重定向
+  const [redirected, setRedirected] = useState(false);
+
+  // 重定向逻辑：只在主题切换时执行一次
+  useEffect(() => {
+    const themeQuery = router.query.theme || ''; // 获取 URL 中的 theme 参数
+    if (themeQuery == 'hexo' && router.pathname !== '/') {
+      // 如果是 hexo 主题且当前路径不是根路径，则重定向到根路径
+      if (!redirected) {
+        router.replace('/');
+        setRedirected(true); // 标记已经执行过重定向
+      }
+    }
+  }, [router.query.theme, router.pathname, redirected]);
+  
   const headerSlot = post ? (
     <PostHero {...props} />
   ) : router.route === '/' &&
