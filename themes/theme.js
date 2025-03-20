@@ -103,6 +103,15 @@ export const getLayoutByTheme = ({ layoutName, theme }) => {
     const loadThemeComponents = componentsSource => {
       const components =
         componentsSource[layoutName] || componentsSource.LayoutSlug
+      
+      // 在加载主题组件时，检查是否需要重定向
+      useEffect(() => {
+        if (themeQuery !== 'gitbook' && router.pathname !== '/') {
+          // 如果不是 gitbook 主题且当前路径不是根路径，则重定向到根路径
+          router.replace('/');
+        }
+      }, [themeQuery, router.pathname])
+      
       setTimeout(fixThemeDOM, 500)
       return components
     }
