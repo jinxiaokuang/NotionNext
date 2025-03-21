@@ -25,10 +25,11 @@ export const Footer = (props) => {
            © {siteConfig('AUTHOR')} {copyrightDate}
          </p>
 
-           <BeiAnSite />
+        <BeiAnSite />
         <BeiAnGongAn />
            
                    <Vercel />
+           <script defer src="//webviso.yestool.org/js/index.min.js"></script>本站访问人次:<span id="page_pv"></span>本站访问人数:<span id="page_uv"></span>
        </div>
      </div>
    </footer>
