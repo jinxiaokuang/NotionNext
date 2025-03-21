@@ -1,5 +1,5 @@
 import DarkModeButton from '@/components/DarkModeButton'
-import Vercel from '@/components/Vercel'
+import PoweredBy from '@/components/PoweredBy'
 import { BeiAnGongAn } from '@/components/BeiAnGongAn'
 import BeiAnSite from '@/components/BeiAnSite'
 import { siteConfig } from '@/lib/config'
@@ -22,14 +22,22 @@ export const Footer = (props) => {
      <div className="my-4 text-sm leading-6">
        <div className="flex align-baseline justify-between flex-wrap">
          <p>
-           © {siteConfig('AUTHOR')} {copyrightDate}
+           © <a href={siteConfig('LINK')} className='underline font-bold  dark:text-gray-300 '> {siteConfig('AUTHOR')}</a> {copyrightDate}
          </p>
 
         <BeiAnSite />
         <BeiAnGongAn />
            
-                   <Vercel />
-           <script defer src="//webviso.yestool.org/js/index.min.js"></script>本站访问人次:<span id="page_pv"></span>本站访问人数:<span id="page_uv"></span>
+        <span className='hidden busuanzi_container_site_pv'>
+          <i className='fas fa-eye' />
+          <span className='px-1 busuanzi_value_site_pv'> </span>
+        </span>
+        <span className='pl-2 hidden busuanzi_container_site_uv'>
+          <i className='fas fa-users' />
+          <span className='px-1 busuanzi_value_site_uv'> </span>
+        </span>
+
+        <PoweredBy className='justify-center' />
        </div>
      </div>
    </footer>
