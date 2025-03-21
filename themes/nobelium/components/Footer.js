@@ -22,12 +22,12 @@ export const Footer = (props) => {
      <div className="my-4 text-sm leading-6">
        <div className="flex align-baseline justify-between flex-wrap">
          <p>
-           © <a href={siteConfig('LINK')} className='underline font-bold  dark:text-gray-300 '> {siteConfig('AUTHOR')}</a> {copyrightDate}
+            <i className='fas fa-copyright' /> {`${copyrightDate}`} 
+            <i className='mx-1 animate-pulse fas fa-heart' />
+            <a href={siteConfig('LINK')} className='underline font-bold  dark:text-gray-300 '>
+              {siteConfig('AUTHOR')}
+            </a>
          </p>
-
-        <BeiAnSite />
-        <BeiAnGongAn />
-           
         <span className='hidden busuanzi_container_site_pv'>
           <i className='fas fa-eye' />
           <span className='px-1 busuanzi_value_site_pv'> </span>
@@ -36,7 +36,11 @@ export const Footer = (props) => {
           <i className='fas fa-users' />
           <span className='px-1 busuanzi_value_site_uv'> </span>
         </span>
-
+        <br />
+              
+        <BeiAnSite />
+        <BeiAnGongAn />
+           
         <PoweredBy className='justify-center' />
        </div>
      </div>
