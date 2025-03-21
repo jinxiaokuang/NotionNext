@@ -36,12 +36,13 @@ export const Footer = (props) => {
           <i className='fas fa-users' />
           <span className='px-1 busuanzi_value_site_uv'> </span>
         </span>
+
+        <PoweredBy className='justify-center' />
         <br />
               
         <BeiAnSite />
         <BeiAnGongAn />
            
-        <PoweredBy className='justify-center' />
        </div>
      </div>
    </footer>
